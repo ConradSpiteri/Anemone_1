@@ -20,8 +20,8 @@ print 'Starting...'
 import subprocess, sys, os, glob, re
 
 # Location of PDF files to convert
-srcDocPath = '/home/pdf417/Dropbox/Projects/Anemone_1/PDFs/Statements/'
-dstDocPath = '/home/pdf417/Dropbox/Projects/Anemone_1/Converted/Statements/'
+srcDocPath = 'C:\\Users\\Conrad\\Dropbox\\Projects\\Anemone_1\\Code\\PDFs\\Statements\\'
+dstDocPath = 'C:\\Users\\Conrad\\Dropbox\\Projects\\Anemone_1\\Code\\Processed\\Statements\\'
 
 # List of path contents
 extention = '*.pdf'
@@ -37,7 +37,7 @@ print len(fileList), "files to process in path ", directory
 
 for i in range (len(fileList)):
 	docToProcess = fileList[i][1]
-	curDocName = docToProcess.split("/")[-1]
+	curDocName = docToProcess.split("\\")[-1]
 	outDocName = curDocName.split(".")[0] + targetExtention
 	docToWrite = directory = os.path.join(dstDocPath, outDocName)
 	print "Processing ", curDocName, "-->", outDocName
