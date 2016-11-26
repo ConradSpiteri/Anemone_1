@@ -8,8 +8,8 @@
 ##  Extract and formats data contianed in the OCRed documents	##
 ##################################################################
 
-import subprocess, sys, os, glob, re, time, mmap, contextlib
-import findData_DEV as fKWD
+import sys, os, glob, re, time, mmap, contextlib
+import findData as fKWD
 
 # New Keyword Structure [[string], [length_range], [special_charracters], [type]].
 # type = "num" for numeric only, "dec" for a number with decimal point, "alpNum" for alphanumeric string.
@@ -22,9 +22,9 @@ t2 = ["BALANCE CARRIED FORWARD", "Closing Balance"]
 keywords = [k1,k2]
 transLims = [t1,t2]
 
-# Location of PDF files to convert
-srcDocPath = 'C:\\Users\\Conrad\\Dropbox\\Projects\\Anemone_1\\Code\\Processed\\Statements\\'
-dstDocPath = 'C:\\Users\\Conrad\\Dropbox\\Projects\\Anemone_1\\Code\\Converted\\Statements\\'
+# Location of text files to convert
+srcDocPath = 'C:\\Projects\\Anemone_1\\Code\\Processed\\Statements\\'
+dstDocPath = 'C:\\Projects\\Anemone_1\\Code\\Converted\\Statements\\'
 
 # List of path contents
 extention = '*.txt'
@@ -39,14 +39,13 @@ print len(fileList), "files to process."
 for i in range (len(fileList)):
         value = {} #sortCode = []; accountNumber = []
         docToProcess = fileList[i][1]
-        curDocName = docToProcess.split("/")[-1]
-        #print "---------------------------", curDocName
+        curDocName = docToProcess.split("\\")[-1]
         with open(docToProcess,"r") as f:
                 filemap = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ) #<= Windows Version, ### prot=mmap.PROT_READ) #<= Linux version
                 bank = fKWD.getBankName(filemap, k0)
                 if bank:
                         print "\n\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
-                        print "Bank statement from -------> ", bank
+                        print curDocName, "\nBank statement from -------> ", bank
                         for k in keywords:
                                 value = fKWD.getAccountDetails(filemap, k)
                                 if len(value) > 0:
@@ -55,11 +54,18 @@ for i in range (len(fileList)):
                                         print "ERROR ", k[0],  " not identified ", value
                         transactions = fKWD.getTransactions(filemap, transLims)
                         print "\nTransactions for this statement: "
-                        for tr in transactions:
-                                print tr
+                        if bank == "HSBC":
+                                cleanTrans = fKWD.cleanTransactions(transactions)
+                                #splitTrans = fKWD.identifyFields(cleanTrans)
+                                for tr in cleanTrans:
+                                        print re.split(r'\s{2,}',tr) #' '.join(tr.split())
+                        else:
+                                for tr in transactions:
+                                        print tr[0] # ' '.join(tr.split())
                         print "End of Statement.\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
                 else:
                         print "\n\nERROR - Unidentified bank! \nStatement not processed. End\n"
+        #break
 
 print "\n\nDone.\n"
 
