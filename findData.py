@@ -1,5 +1,5 @@
 ##################################################################
-## 			findKeywordData.py			##
+## 			findData.py     			##
 ##								##
 ##			 Conrad Spiteri				##
 ##			   03/11/2016				##
@@ -13,7 +13,9 @@
 ## decimal point, "alpNum" for alphanumeric string.		##
 ##################################################################
 
-import subprocess, sys, os, glob, re, time, mmap, contextlib
+import sys, os, glob, re, time, mmap, contextlib
+from dateutil.parser import parse
+
 
 # Establish the name of the bank
 def getBankName(curmap, criteria):
@@ -108,16 +110,100 @@ def getTransactions(curmap, limitKeyWords):
                                 c = mm.find(ss)
                                 if c >= 0:
                                         found = False                   # found end of transactions keyword
-                                        break
-                                
+                                        break          
                         if found == True:
-                                transactions.append([m.rstrip('\n').rstrip('\r')])
+                                transactions.append([m.rstrip('\n').rstrip('\r').rstrip().lstrip()])
         return transactions
-                        
-                        
-                        
 
 
+def cleanTransactions(transactions, curDate):
+        keys = [' ATM ',' BP ',' CHQ ',' CIR ',' CR ',' DD ',' DIV ',' DR ',' MAE ',' SO ',' TRF ',' VIS ',')))'] # HSBC Transaction definition codes with spaces (previous version)
+        keys = ['ATM','BP','CHQ','CIR','CR','DD','DIV','DR','MAE','SO','TRF','VIS',')))'] # HSBC Transaction definition codes
+        cleanTr = []; found = False; space = "   "; transCodeField = []
+        for tr in transactions:
+                curLine = " " + ' '.join(tr[0].lstrip().split())
+                cc = curLine.replace(" ", "")
+                if len(cc) <= 0: # if empty line, ignore
+                        continue
+                try:                                                            # check for date field within the first 7 characters (ommiting leading spaces)
+                        curDate = parse(curLine.lstrip()[:7])
+                        dateMissing = False
+                        transCodeField = curLine.lstrip()[7:].split()[1]        # extract characters in transaction code expected location
+                except:
+                        dateMissing = True
+                        transCodeField = curLine.lstrip().split()[0]            # extract characters in transaction code expected location
+                if found == False:                                              # first instance of running the code - build the transaction line
+                        if transCodeField in keys: # any(key in transCodeField for key in keys):
+                                if dateMissing == False:
+                                        curTr = curDate.strftime("%Y-%m-%d") + space + tr[0].lstrip()[9:].lstrip()
+                                else:
+                                        curTr = curDate.strftime("%Y-%m-%d") + space + tr[0].lstrip()
+                                found = True
+                else:                                                           # all other runs - append to current transaction or start a new one
+                        if transCodeField in keys:                              # if another key is found in the current line, then previous line is a complete transaction
+                                cleanTr.append(curTr[:13+len(space)] + space + curTr[13+len(space):].lstrip()) # save previous transaction
+                                if dateMissing == False:
+                                        curTr = curDate.strftime("%Y-%m-%d") + space + tr[0].lstrip()[9:].lstrip()
+                                else:
+                                        curTr = curDate.strftime("%Y-%m-%d") + space + tr[0].lstrip()
+                        else:                                                   # if no key found then current line part of current transaction. Concatinate
+                                curTr = curTr + " " + tr[0].lstrip()
+        cleanTr.append(curTr[:13+len(space)] + space + curTr[13+len(space):].lstrip())
+        return cleanTr, curDate
+
+def identifyCRorDR(transactions, cleanTr):
+        splitTr = []; posDR = 0; count = 0; transWithVal = []
+
+        # Calculate average end location for debit transactions based on variance from start of description
+        for tr in transactions:                 
+                tempTr = re.split(r'\s{2,}',tr[0])
+
+                try:                                    # line has both transation value and balance
+                        float(tempTr[-2].replace(",", ""))
+                        valueTr = tempTr[-2].lstrip().rstrip()
+                        desc = tempTr[-3].lstrip().rstrip()
+                except:
+                        try:                            # line has transation value only
+                                float(tempTr[-1].replace(",", ""))
+                                valueTr = tempTr[-1].lstrip().rstrip()
+                                desc = tempTr[-2].lstrip().rstrip()
+                        except:              # line has neither transation value or balance (highly unlikely)
+                                continue
+                posDesc = tr[0].find(desc)
+                posVal = tr[0].find(valueTr) + len(valueTr)
+                posDR += (posVal-posDesc)
+                count += 1
+                transWithVal.append(tr[0][posDesc:posVal])
+        avgPosVal = (posDR/count) + 4
+
+        # Determine whether transaction is debit or credit depending on position with respect to average end location for debit transactions calculated above
+        for tr in cleanTr:
+                tempTr = re.split(r'\s{2,}',tr)
+                try:                                    # line has both transation value and balance
+                        float(tempTr[-2].replace(",", ""))
+                        valueTr = tempTr[-2].lstrip().rstrip()
+                        desc = tempTr[-3].lstrip().rstrip()
+                except:
+                        try:                            # line has transation value only
+                                float(tempTr[-1].replace(",", ""))
+                                valueTr = tempTr[-1].lstrip().rstrip()
+                                desc = tempTr[2].lstrip().rstrip()
+                        except:                         # line has neither transation value or balance (highly unlikely)
+                                continue
+                if len(transWithVal)>0:
+                        for tWV in  transWithVal:                 
+                                tempTWV = re.split(r'\s{2,}',tWV)
+                                if tr.find(tWV) >= 0:
+                                        if (tWV.find(tempTWV[-1]) + len(tempTWV[-1])) < avgPosVal:
+                                                splitTr.append([tempTr[0],tempTr[1],tempTr[2],float(valueTr.replace(",", "")),0.00])
+                                        else:
+                                                splitTr.append([tempTr[0],tempTr[1],tempTr[2],0.00,float(valueTr.replace(",", ""))])
+                                        transWithVal.remove(tWV)
+                                        break
+        return splitTr
+                                                
+                        
+                
 
 
 
@@ -131,3 +217,4 @@ def getTransactions(curmap, limitKeyWords):
 
 
         
+                                

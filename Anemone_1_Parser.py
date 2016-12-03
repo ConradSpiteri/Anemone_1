@@ -23,9 +23,9 @@ keywords = [k1,k2]
 transLims = [t1,t2]
 
 # Location of text files to convert
-srcDocPath = 'C:\\Projects\\Anemone_1\\Code\\Processed\\Statements\\'
-dstDocPath = 'C:\\Projects\\Anemone_1\\Code\\Converted\\Statements\\'
-
+srcDocPath = 'C:\\Users\\Conrad\\Dropbox\\Projects\\Anemone_1\\Code\\Processed\\Statements\\'
+dstDocPath = 'C:\\Users\\Conrad\\Dropbox\\Projects\\Anemone_1\\Code\\Converted\\Statements\\'
+curDate = "01 Jan 2016"
 # List of path contents
 extention = '*.txt'
 directory = os.path.join(srcDocPath, extention)
@@ -55,17 +55,17 @@ for i in range (len(fileList)):
                         transactions = fKWD.getTransactions(filemap, transLims)
                         print "\nTransactions for this statement: "
                         if bank == "HSBC":
-                                cleanTrans = fKWD.cleanTransactions(transactions)
-                                #splitTrans = fKWD.identifyFields(cleanTrans)
-                                for tr in cleanTrans:
-                                        print re.split(r'\s{2,}',tr) #' '.join(tr.split())
+                                cleanTrans, curDate = fKWD.cleanTransactions(transactions, curDate)
+                                splitTrans = fKWD.identifyCRorDR(transactions,cleanTrans)
+                                for tr in splitTrans:
+                                        print tr
                         else:
                                 for tr in transactions:
                                         print tr[0] # ' '.join(tr.split())
                         print "End of Statement.\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
                 else:
                         print "\n\nERROR - Unidentified bank! \nStatement not processed. End\n"
-        #break
+        #if i > 0: break
 
 print "\n\nDone.\n"
 
