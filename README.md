@@ -4,7 +4,7 @@
 ##`Anemone_1_Parser.py` 
 Extract basic information from the statement.
 
-Current implementation includes; *Bank Name*, *Sort Code*, *Account Number* and *List of transactions* including weather the transaction is **_"Paid In"_** or **_"Paid Out"_**. Currently no data is being saved but the data is in the correct format where a debit transaction would have the Paid Out field set to `0.00` (last field entry) while a Paid In field is the other way around (zero field in the penultimate position).
+Current implementation includes; *Bank Name*, *Sort Code*, *Account Number* and *List of transactions* including whether the transaction is **_"Paid In"_** or **_"Paid Out"_**. Currently no data is being saved but the data is in the correct format where a debit transaction would have the Paid Out field set to `0.00` (last field entry) while a Paid In field is the other way around (zero field in the penultimate position).
 
 The code takes no arguments but expects text files to be in a specific directory as detailed by `srcDocPath` (line 26). These text files are the OCRed documents using Anemone_1_OCR.py. It also expects to write the resulting text file into the path detailed by `dstDocPath` (line 27). Please change these values to the appropriate paths on your machine. (If running on Windows use "\\\\" instead of "/" to separate the folders in the path name.)
 
