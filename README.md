@@ -8,7 +8,7 @@ Current implementation includes; *Bank Name*, *Sort Code*, *Account Number* and 
 
 The code takes no arguments but expects text files to be in a specific directory as detailed by `srcDocPath` (line 26). These text files are the OCRed documents using Anemone_1_OCR.py. It also expects to write the resulting text file into the path detailed by `dstDocPath` (line 27). Please change these values to the appropriate paths on your machine. (If running on Windows use "\\\\" instead of "/" to separate the folders in the path name.)
 
-**Dependencies:** The code has no special dependancies. Standard dependancies are; `sys`,`os`, `glob`, `re`, `time`, `mmap`and `contextlib`. The code also calls `findData.py` which contians the various extraction method routines. Aslo the PDF files need to be only one page long when OCRed in order to generate Markovian text files and spacing.
+**Dependencies:** The code has no special dependancies. Standard dependancies are; `sys`,`os`, `glob`, `re`, `time`, `mmap`and `contextlib`. The code also calls `findData.py` which contians the various extraction method routines. Aslo the PDF files need to be only one page long when OCRed in order to generate Markovian text files and spacing (See Processed/Statements/ folder)
 
 Current output is to screen only.
 
