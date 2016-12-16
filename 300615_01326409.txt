@@ -1,0 +1,28 @@
+2016-04-01?DDB?fake description1?0?24.20
+2016-04-02?CSH?fake description2 fake description2?0?50.00
+2016-04-04?CRD?fake description3 fake description3?0?8.60
+2016-04-08?CRD?fake description4 fake description4?0?8.95
+2016-04-11?DDB?fake description5?0?191.38
+2016-04-11?CRD?fake description6 fake description6?0?7.10
+2016-04-12?CRD?fake description7 fake description7?0?1.40
+2016-04-14?CSH?fake description8 fake description8?0?50.00
+2016-04-14?CRD?fake description9 fake description9 fake descripti?0?1.68
+2016-04-14?DEB?fake description10 fake description10?0?0.04
+2016-04-18?CRD?fake description11 fake description11?0?77.62
+2016-04-19?PAY?fake description12 fake description12?0?336.00
+2016-04-19?CRD?fake description13 fake description13?0?16.00
+2016-04-20?DDB?fake description14?0?19.98
+2016-04-20?DEB?fake description15 fake description15?0?60.00
+2016-04-20?CRD?fake description16 fake description16?0?30.00
+2016-04-20?CRD?fake description17 fake description17 fake descrip?0?8.46
+2016-04-20?DEB?fake description18 fake description18?0?0.23
+2016-04-22?DDB?fake description19?0?27.93
+2016-04-24?PAY?fake description20 fake description20?0?100.00
+2016-04-25?PAY?fake description21 fake description21?0?100.00
+2016-04-25?CRD?fake description22 fake description22?0?6.10
+2016-04-26?PAY?fake description23 fake description23?0?50.00
+2016-04-27?CSH?fake description24 fake description24?0?50.00
+2016-04-27?CRD?fake description25 fake description25?0?6.95
+2016-04-28?DDB?fake description26?0?20.23
+2016-04-29?PAY?fake description27 fake description27?1?700.00
+2016-04-29?PAY?fake description28 fake description28?0?1344.00

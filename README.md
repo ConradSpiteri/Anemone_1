@@ -4,13 +4,11 @@
 ##`Anemone_1_Parser.py` 
 Extract basic information from the statement.
 
-Current implementation includes; *Bank Name*, *Sort Code*, *Account Number* and *List of transactions* including whether the transaction is **_"Paid In"_** or **_"Paid Out"_**. Currently no data is being saved but the data is in the correct format where a debit transaction would have the Paid Out field set to `0.00` (last field entry) while a Paid In field is the other way around (zero field in the penultimate position).
+Current implementation includes; *Bank Name*, *Sort Code*, *Account Number* and *List of transactions* including whether the transaction is **_"Paid In"_** or **_"Paid Out"_**. Data is being saved to a text file. The file name is made up of the sort code and account number separated by an underscore. The output files can be located in the `\Converted\Statements\` folder. The file structure is made up of a harmonized date, harmonized transaction type, transaction description (limited to 50 characters), **_"Paid In"_** boolean (0 or 1) and the value of the transaction. The fields are separated by a questionmark "?".
 
 The code takes no arguments but expects text files to be in a specific directory as detailed by `srcDocPath` (line 26). These text files are the OCRed documents using Anemone_1_OCR.py. It also expects to write the resulting text file into the path detailed by `dstDocPath` (line 27). Please change these values to the appropriate paths on your machine. (If running on Windows use "\\\\" instead of "/" to separate the folders in the path name.)
 
-**Dependencies:** The code has no special dependancies. Standard dependancies are; `sys`,`os`, `glob`, `re`, `time`, `mmap`and `contextlib`. The code also calls `findData.py` which contians the various extraction method routines. Aslo the PDF files need to be only one page long when OCRed in order to generate Markovian text files and spacing (See Processed/Statements/ folder)
-
-Current output is to screen only.
+**Dependencies:** The code has no special dependancies. Standard dependancies are; `sys`,`os`, `glob`, `re`, `time`, `mmap`and `contextlib`. The code also calls `HSBC.py` or `NATWEST.py` depending on the identified bank statement. The code in these files are very similar but they are tweaked to work with their respective issuing bank and contian various extraction method routines. Also the PDF files need to be only one page long when OCRed in order to generate Markovian text files and spacing (See Processed/Statements/ folder)
 
 ##`Anemone_1_OCR.py` 
 OCRs bank statements into text files using ABBYY Cloud OCR SDK. The OCR account details can be changed from AbbyyOnlineSdk.py lines 38 and 39. **To register for a free account** go to http://ocrsdk.com/ then enter the ApplicationId and Password in their respective lines.
@@ -34,4 +32,3 @@ Please also preserve the current file structure as it has been created with futu
 You should now find the text files in the specified directory.
 
 END.
-
