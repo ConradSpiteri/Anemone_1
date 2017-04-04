@@ -1,6 +1,15 @@
 # **Anemone_1**
 **Project objective** - OCR bank statements and attempt to understand and classify content.
 
+##`Anemone_1_Trainer.py` 
+Train 3 Artificial Neural Network (ANN) agents with the data from Anemone_1_Parser.py. The data is split into training and test data using the ratio specified by `testDataPercentage`. The test data is then fed to the agents where their output is fed to Weighted Majority Rule Ensemble Classifier. The output of the final classifier is a normalized probability for every class.
+
+The code takes no arguments but expects a text file to be in a specific directory as detailed by `srcDocPath` (line 18). The text file contains the extracted data from the statements. It also expects to write the resulting text file into the path detailed by `dstDocPath` (line 19). Please change these values to the appropriate paths on your machine. (If running on Windows use "\\\\" instead of "/" to separate the folders in the path name.)
+
+**Dependencies:** The code requires the Natural Language Tool Kit (NLTK) and PyBrain as dependancies. Standard dependancies are; `sys`,`os`, `glob`, `re`, `time`, `mmap`and `contextlib`. The code requires the `random` library to split the data into taining and test randomly and also requires `tabulate` library to display the results correctly.
+
+Output is currently to screen only but the trained agents can be saved after execution and display of results.
+
 ##`Anemone_1_Parser.py` 
 Extract basic information from the statement.
 
