@@ -1,0 +1,146 @@
+01/04/2016	DDB	the warranty group	0	24.2	Monthly Payment
+02/04/2016	CSH	cash bnk ire apr02 po hinchley @07:58	0	50	Cash
+04/04/2016	CRD	amigo conv store guilford	0	8.6	Food
+08/04/2016	CRD	wwwpactcoffeecom 442030953975	0	8.95	Food
+11/04/2016	DDB	reassure	0	191.38	Monthly Payment
+11/04/2016	CRD	amigo conv store guilford	0	7.1	Food
+12/04/2016	CRD	bentallcentre car park	0	1.4	Travel
+14/04/2016	CSH	cash bnk ire apr14 po hinchley@09:25	0	50	Cash
+14/04/2016	CRD	int'l 0088072015 google *google sto g.co/payhelp#	0	1.68	Monthly Payment
+14/04/2016	DEB	non-sterling transaction fee	0	0.04	Monthly Payment
+18/04/2016	CRD	iz *riverside fish littlehampton	0	77.62	Food
+19/04/2016	PAY	mr a r mcdonald quotation no. 313	0	336	Miscellaneous
+19/04/2016	CRD	national lottery 1 watford	0	16	Miscellaneous
+20/04/2016	DDB	paypal payment	0	19.98	Miscellaneous
+20/04/2016	DEB	cash postoffapr20 12 manor r0a@11:09	0	60	Cash
+20/04/2016	CRD	n0tactivelyl00king 8778877815	0	30	Monthly Payment
+20/04/2016	CRD	int'l 0015647612 google *google sto g.co/payhelp#	0	8.46	Monthly Payment
+20/04/2016	DEB	non-sterling transaction fee	0	0.23	Monthly Payment
+22/04/2016	DDB	british gas serv	0	27.93	Monthly Payment
+24/04/2016	PAY	skipt0n 985395849	0	10000	Miscellaneous
+25/04/2016	PAY	skipt0n 985395849	0	10000	Miscellaneous
+25/04/2016	CRD	tfl.gov.uk/cp tfl travel ch	0	6.1	Travel
+26/04/2016	PAY	skipt0n 985395849	0	5000	Miscellaneous
+27/04/2016	CSH	cash bnk ire apr27 p0 hinchley@15:10	0	50	Cash
+27/04/2016	CRD	wwwpactc0ffeec0m 442030953975	0	6.95	Food
+28/04/2016	DDB	2	0	20.23	Monthly Payment
+29/04/2016	PAY	spiteri s temp	1	700	Miscellaneous
+29/04/2016	PAY	mr a r mcdonald invoice no. 313	0	1344	Miscellaneous
+01/08/2016	DDB	the warranty group	0	24.2	Monthly Payment
+01/08/2016	DDB	paypal payment	0	23.99	Miscellaneous
+01/08/2016	CRD	sports generation richmond surr	0	343.2	Leisure
+01/08/2016	CRD	budgens eton berkshire	0	20.51	Food
+05/08/2016	CSH	cash bnk ire aug05 po hinchley @09:49	0	80	Cash
+05/08/2016	PAY	skipton 985395849	0	10000	Miscellaneous
+06/08/2016	PAY	skipton 985395849	0	10000	Miscellaneous
+07/08/2016	PAY	skipton 985395849	0	10000	Miscellaneous
+08/08/2016	PAY	skipton 985395849	0	10000	Miscellaneous
+08/08/2016	CRD	cheeky chimps soft m0lesey	0	165	Leisure
+08/08/2016	CRD	c0stcutter surrey guildford sur	0	8.69	Food
+09/08/2016	PAY	skipton 985395849	0	10000	Miscellaneous
+09/08/2016	CRD	co-op group 070424 fishguard (s	0	21.29	Food
+09/08/2016	CRD	co-op group 070424 fishguard (s	0	28.07	Food
+10/08/2016	DDB	reassure	0	191.38	Monthly Payment
+15/08/2016	UNK	vis co-op group 070424 fishguard (s	0	22.46	Food
+16/08/2016	UNK	bp spiteri s for savings	1	500	Miscellaneous
+16/08/2016	CRD	int'l 0078659573 wwwpactc0ffeec0m 442030953975	0	6.95	Monthly Payment
+22/08/2016	DDB	british gas serv	0	28.85	Monthly Payment
+22/08/2016	CRD	int'l 0097704116 google *google sto g.co/payhelp#	0	9.19	Monthly Payment
+26/08/2016	CRD	the national trust 30 aug 16	0	2.6	Leisure
+30/08/2016	CRD	costcutter surrey 30 aug 16	0	3.22	Food
+01/07/2016	DDB	the warranty group	0	24.2	Monthly Payment
+04/07/2016	PAY	spiteri s for savings	1	10000	Miscellaneous
+04/07/2016	CRD	sports generation richmond surr	0	132	Leisure
+07/07/2016	CRD	amigo c0nv store guilford	0	8.52	Food
+11/07/2016	DDB	reassure	0	191.38	Monthly Payment
+11/07/2016	CRD	h0bbled0wn limited epsom	0	5	Leisure
+12/07/2016	PAY	spiteri s for savings	1	10000	Miscellaneous
+13/07/2016	DDB	paypal payment	0	26.15	Miscellaneous
+15/07/2016	CRD	waitr0se 232 surbiton	0	27.65	Food
+15/07/2016	PAY	spiteri s for savings	1	5000	Miscellaneous
+17/07/2016	CSH	cash bnk ire jul17 p0 hinchley@12:56	0	100	Cash
+18/07/2016	PAY	spiteri s for savings	1	10000	Miscellaneous
+01/01/2010	DEB	non-sterling transaction fee	0	0.25	Monthly Payment
+01/01/2010	CRD	int'l 0050102582 wwwpactc0ffeec0m 442030953975	0	6.95	Monthly Payment
+21/07/2016	CRD	tflgov.uk/cp tfl travel ch	0	3	Travel
+22/07/2016	DDB	british gas serv	0	28.88	Monthly Payment
+25/07/2016	CRD	c0stcutter surrey guildford sur	0	5.48	Food
+26/07/2016	PAY	spiteri s for savings	1	10000	Miscellaneous
+28/07/2016	DDB	2	0	20.25	Monthly Payment
+29/07/2016	CRD	national lottery 1 watford	0	11.1	Miscellaneous
+30/07/2016	PAY	simone fenech as requested	0	500	Miscellaneous
+02/12/2016	DDB	the warranty group	0	24.2	Monthly Payment
+02/06/2016	DDB	paypal payment	0	19.07	Miscellaneous
+04/06/2016	CSH	cash bnk ire jun04 po hinchley@14:13	0	50	Cash
+06/06/2016	CRD	taxi fare byverif 03336661000	0	14.52	Travel
+06/06/2016	CRD	tflgov.uk/cp tfl travel ch	0	1.5	Travel
+10/06/2016	DDB	reassure	0	191.38	Monthly Payment
+13/06/2016	CRD	marks&spencer plc teddington	0	2.7	Food
+15/06/2016	DDB	paypal payment	0	24.12	Miscellaneous
+15/06/2016	DDB	paypal payment	0	88	Miscellaneous
+15/06/2016	PAY	spiteri s temp	1	10000	Miscellaneous
+18/06/2016	CSH	cash hsbc jun18 kingsbridge @14:59	0	50	Cash
+20/06/2016	CRD	ringgo south hams	0	2.6	Travel
+20/06/2016	CRD	ringgo south hams	0	2.2	Travel
+20/06/2016	CRD	int'l 0007259483 google *google sto g.co/payhelp#	0	8.53	Monthly Payment
+01/01/2010	DEB	non-sterling transaction fee	0	0.23	Monthly Payment
+22/06/2016	DDB	british gas serv	0	27.93	Monthly Payment
+22/06/2016	CRD	royal mail 084560 internet	0	11.15	Miscellaneous
+22/06/2016	CRD	euro liverpool	0	65	Travel
+22/06/2016	CRD	int'l 0016281219 wwwpactc0ffeec0m 442030953975	0	6.95	Food
+24/06/2016	CRD	national lottery 1 watford	0	32	Miscellaneous
+27/06/2016	CSH	cash bnk ire jun27 p0 hinchley@09:10	0	100	Cash
+28/06/2016	DDB	2	0	28.21	Monthly Payment
+03/05/2016	DDB	the warranty group	0	24.2	Monthly Payment
+03/05/2016	CSH	cash bnk ire may03 po hinchley @09:17 60.00	0	450.93	Monthly Payment
+05/05/2016	CRD	www.purpleparking. internet 52.66	0	398.27	Travel
+06/05/2016	CSH	cash bnk ire may06 po hinchley@12:26	0	50	Cash
+09/05/2016	CRD	amigo conv store guilford	0	8.93	Food
+10/05/2016	DDB	reassure	0	191.38	Monthly Payment
+13/05/2016	CSH	cash barclay may13 southfields @09:52	0	50	Cash
+16/05/2016	CRD	national lottery 1 watford	0	11.5	Miscellaneous
+20/05/2016	CRD	int'l 0058512013 google *google sto g.co/payhelp#	0	8.24	Monthly Payment
+20/05/2016	DEB	non-sterling transaction fee	0	0.22	Monthly Payment
+23/05/2016	DDB	british gas serv	0	27.93	Monthly Payment
+25/05/2016	DDB	paypal payment	0	13.79	Miscellaneous
+25/05/2016	CRD	int'l 0082000884 wwwpactc0ffeec0m 442030953975	0	6.95	Food
+28/05/2016	PAY	spiteri s temp	0	600	Miscellaneous
+31/08/2016	DDB	the warranty group	0	24.2	Monthly Payment
+01/09/2016	DDB	paypal payment	0	23.99	Miscellaneous
+08/09/2016	CRD	simply me teddington tw	0	16	Miscellaneous
+08/09/2016	CSH	cash bnk iresep08 p0 hinchley@16:04	0	100	Cash
+09/09/2016	CRD	tfl.gov.uk/cp tfl travel ch	0	3	Travel
+12/09/2016	DDB	reassure	0	191.38	Monthly Payment
+13/09/2016	CRD	int'l 0011593659 wwwpactcoffeecom 442030953975	0	6.95	Food
+14/09/2016	DDB	paypal payment	0	34.5	Miscellaneous
+14/09/2016	CRD	national lottery watford	0	16	Miscellaneous
+15/09/2016	CRD	national lottery watford	0	25.4	Miscellaneous
+16/09/2016	CRD	rose car park kingston	0	1.5	Travel
+19/09/2016	DDB	paypal payment	0	19	Miscellaneous
+20/09/2016	CRD	int'l 0044494439 google *google sto g.co/payhelp#	0	9.23	Monthly Payment
+20/09/2016	DEB	non-sterling transaction fee	0	0.25	Monthly Payment
+21/09/2016	DDB	paypal payment	0	9.99	Miscellaneous
+22/09/2016	DDB	british gas serv	0	28.85	Monthly Payment
+26/09/2016	CRD	lulticket machine london bridge	0	10	Travel
+28/09/2016	DDB	2	0	22.92	Monthly Payment
+30/09/2016	DDB	the warranty group	0	24.2	Monthly Payment
+30/09/2016	DDB	paypal payment	0	23.99	Miscellaneous
+30/09/2016	CSH	cash bnk iresep30 p0 hinchley @11:48	0	80	Cash
+01/07/2016	DIV	30jun grs 78819431	1	1.88	Miscellaneous
+01/07/2016	PAY	"call ref.no. 5332 , ian rudland ,"	0	300	Miscellaneous
+01/07/2016	CSH	bmach 01jul	0	200	Cash
+01/07/2016	DDB	contact lens plan	0	30.67	Monthly Payment
+05/07/2016	DDB	vodafone ltd	0	131.46	Monthly Payment
+08/07/2016	PAY	"call ref.no. 5343 , natwest"	0	2247.97	Miscellaneous
+11/07/2016	PAY	"call ref.no. 5343 , to a/c"	0	2400	Miscellaneous
+11/07/2016	PAY	"call ref.no. 5343 , amazon , fp"	0	181.8	Miscellaneous
+13/07/2016	CSH	notemachine 12jul	0	100	Cash
+15/07/2016	PAY	"call ref.no. 0000 , from a/c"	1	50	Miscellaneous
+15/07/2016	DDB	battersea dogs	0	15	Monthly Payment
+21/07/2016	DEB	30jun a/c 78819431	0	26	Miscellaneous
+22/07/2016	PAY	"call ref.no. 0000 , from a/c"	1	1829	Miscellaneous
+22/07/2016	DDB	rspca	0	15	Monthly Payment
+25/07/2016	CRD	"paypal, ppwdl42hj29rbnw4ee,"	1	650	Miscellaneous
+25/07/2016	PAY	"chris marshall, tony c , via"	0	150	Miscellaneous
+25/07/2016	DDB	vwfs uk limited	0	1117.94	Monthly Payment
+25/07/2016	DDB	vwfs uk limited	0	36.55	Monthly Payment
