@@ -40,4 +40,8 @@ Please also preserve the current file structure as it has been created with futu
 
 You should now find the text files in the specified directory.
 
+##`Anemone_1_CSV_Parser.py` 
+A simple parser that extracts data from specific `.csv` files, normalizes the transaction code and saves the data in the correct format ready for training the calssifier. This code is specific to the files that were received and is not directly reusable on other formats without modification.
+
+
 END.
