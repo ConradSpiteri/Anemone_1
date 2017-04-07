@@ -1,8 +1,8 @@
 ##################################################################
-## 			Anemone_1_Parser.py			##
+## 			Anemone_1_CSV_Parser.py			##
 ##								##
 ##			 Conrad Spiteri				##
-##			   29/10/2016				##
+##			   05/04/2017				##
 ##								##
 ##################################################################
 ##  Extract and formats data contianed in the OCRed documents	##
