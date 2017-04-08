@@ -10,6 +10,17 @@ The code takes no arguments but expects a text file to be in a specific director
 
 Output is currently to screen only but the trained agents can be saved after execution and display of results.
 
+
+##`Anemone_1_Lic_Parser.py` 
+Extracts basic information from an OCRed driver's licence.
+
+The code takes no arguments but expects a text file to be in a specific directory as detailed by srcDocPath (line 15). The text file contains the extracted data from the statements. It also expects to write the resulting text file into the path detailed by `dstDocPath` (line 16). Please change these values to the appropriate paths on your machine. (If running on Windows use "\\\\" instead of "/" to separate the folders in the path name.)
+
+**Dependencies:** The code has no special dependancies. Standard dependancies are; `sys`,`os`, `glob`, `re`, `time`, `mmap`and `contextlib`. The code also requires `dateutil` library to display the date correctly.
+
+Output is currently to screen only 
+
+
 ##`Anemone_1_Parser.py` 
 Extract basic information from the statement.
 
